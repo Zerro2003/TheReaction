@@ -1,7 +1,10 @@
 import React from "react"
+// TestState: demonstrates useState with arrays
+// Using the spread operator to add items to state arrays
 export default function TestState(){
     const [count, setCount] = React.useState([])
     function add(){
+        // spread the existing array and add new item
         setCount(count=>[...count,1])
     }
     return(
