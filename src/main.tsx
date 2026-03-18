@@ -5,20 +5,13 @@ import NewFacts from "./nav.tsx";
 import Sim from "./sim.tsx";
 import { myData } from "./data.tsx";
 import Chef from "./chef.tsx";
+import Space from "./space.tsx";
+import TestState from "./testState.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <NewFacts/>
-    {myData.map((item)=>{
-      return(
-        <Sim
-        key={item.id}
-        name={item.name}
-        age={item.age}
-        email={item.email}
-        phone={item.phone}
-        />
-      )
-    })}
     <Chef/>
+    <Space/>
+    <TestState/>
   </StrictMode>,
 );
