@@ -1,0 +1,49 @@
+/* Weather Card Styles */
+.weather-card {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+.weather-emoji {
+  font-size: 4rem;
+}
+
+.weather-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* Alert Banner Styles */
+.alert-banner {
+  padding: 12px 20px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.alert-dismiss {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Grade Display Styles */
+.grade-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.grade-letter {
+  font-size: 4rem;
+  font-weight: bold;
+}
