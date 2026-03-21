@@ -1,11 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import TodoList from "./todoList.tsx";
-import ShoppingCart from "./shoppingCart.tsx";
+import Clock from "./clock.tsx";
+import Timer from "./timer.tsx";
+import WindowSize from "./windowSize.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <TodoList />
-    <ShoppingCart />
+    <Clock />
+    <Timer />
+    <WindowSize />
   </StrictMode>,
 );
