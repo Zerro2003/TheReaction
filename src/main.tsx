@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import Clock from "./clock.tsx";
-import Timer from "./timer.tsx";
-import WindowSize from "./windowSize.tsx";
+import ContactForm from "./contactForm.tsx";
+import SearchFilter from "./searchFilter.tsx";
+import PasswordStrength from "./passwordStrength.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Clock />
-    <Timer />
-    <WindowSize />
+    <ContactForm />
+    <SearchFilter />
+    <PasswordStrength />
   </StrictMode>,
 );
