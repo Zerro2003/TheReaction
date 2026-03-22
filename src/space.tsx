@@ -5,34 +5,30 @@ export default function Space() {
     let disp = arr.map((itm,ind)=> <p key={ind}>{itm}</p>)
     function handle(formData: FormData): void {
         const newIngr = formData.get('ingredient')
-        if (typeof newIngr === 'string') {
-             setArr(prevIngr => [...prevIngr, newIngr]) }
+        if (typeof newIngr === 'string' && newIngr.trim() !== '') {
+             setArr(prevIngr => [...prevIngr, newIngr]) 
+        }
     }
-    // function afterSubmit(formData: FormData): void {
-    //     const newIngri = formData.getAll('newIngri')
-    // console.log(newIngri)
-    // }
     return (
-        <main className="h-80 bg-gray-500 text-center">
-            <form action={handle} className="">
+        <main style={{padding: "20px", background: "#f5f5f5", textAlign: "center"}}>
+            <h2>🍳 Ingredient List</h2>
+            <form action={handle}>
                 <input 
                     type="text" 
                     name="ingredient" 
-                    placeholder="Enter ingredient" 
+                    placeholder="Enter ingredient"
+                    required
+                    style={{padding: "8px", marginRight: "10px"}}
                 />
-                <fieldset>
+                <fieldset style={{margin: "10px 0"}}>
                     <input type="radio" name="size" value="small" />small
                     <input type="radio" name="size" value="medium" />medium
                     <input type="radio" name="size" value="large" />large
                 </fieldset>
-                <fieldset>
-                    <input type="checkbox" name="veg" value="veg" />veg
-                    <input type="checkbox" name="veg" value="all" />aller
-                    <input type="checkbox" name="veg" value="non-veg" />non-veg
-                </fieldset>
-                <button type="submit">Submit</button>
+                <button type="submit" style={{padding: "8px 16px"}}>Add Ingredient</button>
             </form>
-            {disp}
+            <div style={{marginTop: "15px"}}>{disp}</div>
+            <p style={{color: "#666"}}>{arr.length} ingredients added</p>
         </main> 
     )
 }
